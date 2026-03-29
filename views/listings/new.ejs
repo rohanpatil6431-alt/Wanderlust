@@ -1,0 +1,45 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h3 class="mt-3 mb-3">Create New Listing</h3>
+    <form action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input name = "listing[title]" type="text" placeholder="Enter Title" required class="form-control">
+            <div class="valid-feedback">Title looks Good!</div>
+        </div>
+   
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name = "listing[description]" type="text" placeholder="Enter Description" required class="form-control"></textarea>
+            <div class="invalid-feedback">Please enter a short description.</div>
+        </div>
+   
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+                    <input name = "listing[image]" type="file" placeholder="Enter Image URL" class="form-control">
+        </div>
+         <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input name = "listing[price]" type="number" placeholder="Enter Price" required class="form-control">
+            <div class="invalid-feedback">Price should be valid</div>
+        </div>
+        <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input name = "listing[country]" type="text" placeholder="Enter Country" required class="form-control">
+             <div class="invalid-feedback">Country name should be valid</div>
+        </div>
+     </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input name = "listing[location]" type="text" placeholder="Enter Location" required class="form-control">
+            <div class="invalid-feedback">Location name should be valid</div>
+        </div>
+
+        <button type="submit" class=" btn add-btn mb-3">Create Listing</button>
+        </div>
+    </div>
+</body>
+</html>
