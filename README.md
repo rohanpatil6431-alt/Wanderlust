@@ -10,11 +10,6 @@ A production-grade Airbnb-inspired listing platform where users can discover, cr
 
 ---
 
-## 📸 Preview
-
-![Homepage Preview](./public/images/preview.png)
-
----
 
 ## ✨ Features
 
