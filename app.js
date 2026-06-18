@@ -6,7 +6,7 @@ const app = express()
 const port = 3000
 const mongoose = require('mongoose');
 const localUrl = 'mongodb://localhost:27017/airbnb-clone';
-// const dburl = process.env.ATLASDB_URL;
+const dburl = process.env.ATLASDB_URL;
 const path = require('path');
 const methodOverride = require('method-override');
 const ejsMate = require('ejs-mate');
@@ -33,7 +33,7 @@ main()
     });
 
 async function main() {
-    await mongoose.connect(localUrl);
+    await mongoose.connect(dburl);
 };
 
 app.set("trust proxy", 1);
