@@ -57,9 +57,9 @@ const sessionOptions = {
 }
 
 
-app.get('/', wrapAsync((req, res) => {
-    res.render('index.ejs');
-}))
+// app.get('/', wrapAsync((req, res) => {
+//     res.render('index.ejs');
+// }))
 
 
 
