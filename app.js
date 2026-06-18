@@ -36,6 +36,7 @@ async function main() {
     await mongoose.connect(localUrl);
 };
 
+app.set("trust proxy", 1);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
@@ -49,6 +50,7 @@ const sessionOptions = {
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7, // 1 week
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
